@@ -1,0 +1,57 @@
+.profile-image {
+  position: relative;
+  width: 120px;
+  margin: auto;
+}
+
+.profile-image > img {
+  border-radius: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.profile-image > button {
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+}
+
+.card{
+  background-color: #181818de;
+  color: rgb(231, 231, 231);
+  font-family: 'Nunito';
+}
+.labels{
+  font-family: 'Nunito';
+  color: rgb(231, 231, 231);
+}
+input::placeholder{
+  color: rgb(231, 231, 231);
+}
+
+.fa-solid{
+  font-size: 20px;
+}
+.btn-img:hover{
+  background-color: white;
+  color: #3f51b5;
+  transition: 0.75s;
+}
+.form-container {
+  max-width: 400px;
+}
+
+.row {
+  display: flex;
+  gap: 16px;
+}
+
+.btn-save{
+  width: 100%;
+  font-family: 'Nunito';
+  font-size: 18px;
+}
+.btn-save:hover{
+  transition: all 0.4s ease-in-out;
+  transform: translateY(-3px);
+}

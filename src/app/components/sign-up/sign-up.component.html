@@ -1,0 +1,55 @@
+<div class="card form-container mat-elevation-z5">
+  <h1 class="form-perso">Registrar Novo Usuário</h1>
+  <form [formGroup]="signUpForm" (ngSubmit)="submit()">
+    <mat-form-field appearance="fill" class="form-perso">
+      <mat-label class="labels">Nome</mat-label>
+      <input matInput placeholder="Digite aqui..." formControlName="name"/>
+      <mat-error *ngIf="name?.errors?.['required']">
+        Por favor, insira um nome válido.
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="form-perso">
+      <mat-label class="labels">Email</mat-label>
+      <input matInput placeholder="Digite aqui..." formControlName="email" />
+      <mat-error *ngIf="email?.errors?.['required']">
+          Por favor, insira um email.
+      </mat-error>
+      <mat-error *ngIf="email?.errors?.['email']">
+          Por favor, insira um email VÁLIDO.
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="form-perso">
+      <mat-label class="labels">Senha</mat-label>
+      <input
+        matInput
+        type="password"
+        placeholder="Digite aqui..."
+        formControlName="password"
+      />
+      <mat-error *ngIf="password?.errors?.['required']">
+        Por favor, insira uma senha.
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="form-perso">
+      <mat-label class="labels">Confirme a Senha</mat-label>
+      <input
+        matInput
+        type="password"
+        placeholder="Digite aqui..."
+        formControlName="confirmPassword"
+      />
+      <mat-error *ngIf="confirmPassword?.errors?.['required']">
+          Por favor, confirme a senha.
+      </mat-error>
+    </mat-form-field>
+    <mat-error *ngIf="signUpForm.errors?.['passwordsDontMatch']">
+        As senhas não estão iguais. Por favor, revise.
+    </mat-error>
+    <div class="center margin-top">
+      <button type="submit" mat-raised-button color="primary" class="btns"><i class="fa-solid fa-check"></i>&nbsp;Registrar</button>
+      &nbsp;
+    </div>
+  </form>
+  <br>
+  <button mat-raised-button color="accent" routerLink = "/login" class="btns"><i class="fa-solid fa-xmark"></i>&nbsp;Cancelar</button>
+</div>

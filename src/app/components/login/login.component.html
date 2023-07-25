@@ -1,0 +1,41 @@
+<div class="card form-container">
+  <h1 class="form-perso">Login</h1>
+  <form [formGroup]="loginForm" (ngSubmit)="submit()">
+      <mat-form-field appearance="fill" class="form-perso">
+          <mat-label class="labels"><i class="fa-solid fa-envelope"></i>&nbsp;&nbsp;Email</mat-label>
+          <input matInput placeholder="Digite aqui..." formControlName="email" class="inputs" />
+          <mat-error *ngIf="email?.errors?.['required']">Por favor, insira um e-mail válido.</mat-error>
+      </mat-form-field>
+
+      <br>
+
+      <mat-form-field appearance="fill" class="form-perso">
+          <mat-label class="labels"><i class="fa-solid fa-lock"></i>&nbsp;&nbsp;Senha</mat-label>
+          <input matInput placeholder="Digite aqui..." formControlName="password" [type]="hide ? 'password' : 'text'" class="inputs"/>
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+              [attr.aria-pressed]="hide">
+              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+          <mat-error *ngIf="password?.errors?.['required']">Por favor, insira a senha.</mat-error>
+      </mat-form-field>
+
+      <div class="center margin-top">
+          <button mat-raised-button color="primary" type="submit" class="form-perso" class="btn-log"><i class="fa-solid fa-right-to-bracket"></i>&nbsp;&nbsp;Login</button>
+      </div>
+
+      <br>
+
+      <span class="center margin-top" class="form-perso">Novo(a) na plataforma?&nbsp;<a routerLink="/sign-up"
+              class="sign-up-link">Cadastre-se!</a></span>
+  </form>
+
+  <br> <br>
+  <br> <br>
+  <br> <br>
+
+
+  <div style="text-align: center;">
+  <span style="font-family: 'Nunito'; font-style: italic; text-align: center;">powered by Mateus Augusto</span>
+  </div>
+  </div>
+

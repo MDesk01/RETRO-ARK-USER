@@ -1,0 +1,40 @@
+<div class="container-max">
+<mat-toolbar>
+  <span class="title">Retro Ark User</span>
+  <ng-container *ngIf="user$ | async as user; else loginButton">
+    <button mat-button [matMenuTriggerFor]="userMenu" class="btn-actions">
+      <img
+        width="30"
+        height="30"
+        class="profile-image-toolbar"
+        [src]="user.photoURL ?? 'assets/images/image-placeholder.png'"
+      />
+      {{ user.displayName }}
+      <mat-icon>expand_more</mat-icon>
+    </button>
+  </ng-container>
+  <ng-template #loginButton>
+    <button mat-button routerLink="login" class="btn-actions">
+      <mat-icon>login</mat-icon>
+      Login
+    </button>
+  </ng-template>
+</mat-toolbar>
+
+<div class="content">
+  <router-outlet></router-outlet>
+</div>
+
+<mat-menu #userMenu="matMenu">
+  <button mat-menu-item routerLink="/profile" class="btn-actions-2">
+    <i class="fa-regular fa-user"></i>
+    &nbsp;
+    Profile
+  </button>
+  <button mat-menu-item (click)="logout()" class="btn-actions-2">
+    <i class="fa-solid fa-right-from-bracket"></i>
+    &nbsp;
+    Logout
+  </button>
+</mat-menu>
+</div>

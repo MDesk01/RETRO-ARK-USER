@@ -1,0 +1,27 @@
+.card{
+    background-color: #181818de;
+    color: rgb(231, 231, 231);
+    font-family: 'Nunito';
+}
+.labels{
+    color: rgb(231, 231, 231);
+}
+
+input::placeholder{
+    color: rgb(231, 231, 231);
+}
+.sign-up-link{
+    font-size: 1.2rem;
+    margin-left: 8px;
+}
+.form-perso{
+    font-family: 'Nunito';
+}
+.btns{
+    width: 100%;
+    font-family: 'Nunito';
+}
+.btns:hover{
+    transition: all 0.4s ease-in-out;
+    transform: translateY(-3px);
+}

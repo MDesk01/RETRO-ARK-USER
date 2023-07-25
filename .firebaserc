@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "conecte-app": {
+      "hosting": {
+        "conecte-app": [
+          "conecte-app"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "conecte-app"
+  }
+}
