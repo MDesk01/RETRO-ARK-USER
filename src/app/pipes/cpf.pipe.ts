@@ -1,3 +1,4 @@
+/*AUTOR: MATEUS AUGUSTO S. AZEVEDO*/
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({

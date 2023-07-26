@@ -1,3 +1,4 @@
+/*AUTOR: MATEUS AUGUSTO S. AZEVEDO*/
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 

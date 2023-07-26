@@ -1,3 +1,4 @@
+/*AUTOR: MATEUS AUGUSTO S. AZEVEDO*/
 export interface ProfileUser {
   uid: string;
   email?: string;

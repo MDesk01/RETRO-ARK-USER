@@ -1,3 +1,4 @@
+/*AUTOR: MATEUS AUGUSTO S. AZEVEDO*/
 import { Injectable } from '@angular/core';
 import {
   getDownloadURL,

@@ -1,3 +1,4 @@
+/*AUTOR: MATEUS AUGUSTO S. AZEVEDO*/
 import { CpfPipe } from './cpf.pipe';
 
 describe('CpfPipe', () => {

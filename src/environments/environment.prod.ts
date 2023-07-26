@@ -1,3 +1,4 @@
+/*AUTOR: MATEUS AUGUSTO S. AZEVEDO*/
 export const environment = {
   firebase: {
   apiKey: "AIzaSyAAxq9i7hakb8yMfLHUrvuZ2ucbAmdivcc",
