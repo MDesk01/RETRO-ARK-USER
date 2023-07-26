@@ -26,10 +26,20 @@
 </div>
 
 <mat-menu #userMenu="matMenu">
+  <button mat-menu-item routerLink="/home" class="btn-actions-2">
+    <i class="fa-solid fa-house"></i>
+    &nbsp;
+    Home
+  </button>
   <button mat-menu-item routerLink="/profile" class="btn-actions-2">
     <i class="fa-regular fa-user"></i>
     &nbsp;
-    Profile
+    Perfil
+  </button>
+  <button mat-menu-item class="btn-actions-2" (click)="about()">
+    <i class="fa-solid fa-info"></i>
+    &nbsp;
+    Sobre
   </button>
   <button mat-menu-item (click)="logout()" class="btn-actions-2">
     <i class="fa-solid fa-right-from-bracket"></i>

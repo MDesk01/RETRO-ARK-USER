@@ -1,3 +1,12 @@
-<ng-container *ngIf="user$ | async as user">
-    <h1>Bem vindo(a), {{user.displayName}}!</h1>
-</ng-container>
+<mat-card *ngIf="user$ | async as user">
+    <h1 style="font-weight: bold;">Bem vindo(a), {{user.firstName}} {{user.lastName}}!</h1>
+    <!--
+    <mat-list>
+        <mat-list-item>Telefone: {{user.phone}}</mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>E-mail: {{user.email}}</mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>Endereço: {{user.address}}</mat-list-item>       
+      </mat-list>
+      -->
+</mat-card>

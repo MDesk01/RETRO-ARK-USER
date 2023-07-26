@@ -24,7 +24,7 @@ export class ProfileComponent implements OnInit {
     firstName: [''],
     lastName: [''],
     phone: [''],
-    address: [''],
+    address: ['']
   });
 
   constructor(
@@ -79,6 +79,6 @@ export class ProfileComponent implements OnInit {
         }        
         )
       )
-      .subscribe(      );
+      .subscribe();
   }
 }

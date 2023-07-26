@@ -1,15 +1,13 @@
-<div
-  class="card form-container mat-elevation-z5 text-center"
-  *ngIf="user$ | async as user"
->
-  <h1>Atualizar o Perfil</h1>
+<div class="card form-container mat-elevation-z5 text-center" *ngIf="user$ | async as user">  
+
+  <h1>
+    <i class="fa-solid fa-user-gear"></i>
+    &nbsp;
+    Atualizar o Perfil
+  </h1>
   <div class="profile-image">
-    <img
-      width="120"
-      height="120"
-      class="margin-top mat-elevation-z1"
-      [src]="user.photoURL ?? '/assets/images/image-placeholder.png'"
-    />
+    <img width="120" height="120" class="margin-top mat-elevation-z1"
+      [src]="user.photoURL ?? '/assets/images/image-placeholder.png'" />
     <button mat-mini-fab (click)="inputField.click()" color="primary" class="btn-img">
       <i class="fa-solid fa-camera-retro"></i>
     </button>
@@ -20,52 +18,32 @@
     <div class="row">
       <mat-form-field>
         <mat-label class="labels">Nome</mat-label>
-        <input
-          type="text"
-          matInput
-          formControlName="firstName"
-          placeholder="Digite aqui..."
-        />
+        <input type="text" matInput formControlName="firstName" placeholder="Digite aqui..." />
       </mat-form-field>
       <mat-form-field>
         <mat-label class="labels">Sobrenome</mat-label>
-        <input
-          type="text"
-          matInput
-          formControlName="lastName"
-          placeholder="Digite aqui..."
-        />
+        <input type="text" matInput formControlName="lastName" placeholder="Digite aqui..." />
       </mat-form-field>
     </div>
 
     <div class="row">
       <mat-form-field>
         <mat-label class="labels">Nome do Display</mat-label>
-        <input
-          type="text"
-          matInput
-          formControlName="displayName"
-          placeholder="Digite aqui..."
-        />
+        <input type="text" matInput formControlName="displayName" placeholder="Digite aqui..." />
       </mat-form-field>
       <mat-form-field>
         <mat-label class="labels">Telefone</mat-label>
-        <input
-          type="number"
-          matInput
-          formControlName="phone"
-          placeholder="Digite aqui..."
-        />
+        <input matInput formControlName="phone" placeholder="Digite aqui..." />
       </mat-form-field>
     </div>
     <mat-form-field>
+      <mat-label class="labels">CPF</mat-label>
+      <input matInput formControlName="cpf" placeholder="Digite aqui..." type="number"/>
+    </mat-form-field>
+
+    <mat-form-field>
       <mat-label class="labels">Endereço</mat-label>
-      <input
-        type="text"
-        matInput
-        formControlName="address"
-        placeholder="Digite aqui..."
-      />
+      <input type="text" matInput formControlName="address" placeholder="Digite aqui..." />
     </mat-form-field>
 
     <button type="submit" class="btn-save" mat-raised-button color="primary">
